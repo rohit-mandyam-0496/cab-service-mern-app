@@ -1,0 +1,7 @@
+server/node_modules
+server/package-lock.json
+server/.env
+
+cab-booking-client/.env
+cab-booking-client/node_modules
+cab-booking-client/package-lock.json
