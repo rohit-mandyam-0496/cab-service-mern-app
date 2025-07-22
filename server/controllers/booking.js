@@ -353,7 +353,7 @@ const getCustBookings = async (req, res) => {
       ])
       .exec();
     const totalRecords = await booking.countDocuments({
-      customerId: req.user._id,
+      customer: req.user._id,
     });
     if (!bookings.length) {
       return __.customErrMsg(req, res, 404, "No bookings found");
@@ -516,7 +516,7 @@ const getDriverBookings = async (req, res) => {
       res,
       200,
       bookings,
-      bookings.length,
+      totalRecords,
       "Data retrieved successfully"
     );
   } catch (err) {
